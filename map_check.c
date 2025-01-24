@@ -1,4 +1,70 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   map_check.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/23 17:16:16 by yalp              #+#    #+#             */
+/*   Updated: 2025/01/24 16:30:57 by yalp             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
+
+int find_loc_y(t_map *map1, char a)
+{
+	int i = 0;
+	int j;
+
+	while ((*map1).map_layout[i])
+	{
+		j = 0;
+		while ((*map1).map_layout[i][j])
+		{
+			if ((*map1).map_layout[i][j] == a)
+				return (i);
+			j++;
+		}
+		i++;
+	}
+	return (-1);
+}
+int find_loc_x(t_map *map1, char a)
+{
+	int i = 0;
+	int j;
+
+	while ((*map1).map_layout[i])
+	{
+		j = 0;
+		while ((*map1).map_layout[i][j])
+		{
+			if ((*map1).map_layout[i][j] == a)
+				return (j);
+			j++;
+		}
+		i++;
+	}
+	return (-1);
+}
+
+void map_sets(t_map *map1)
+{
+	if (count_player(map1) == 1)
+	{
+		map1->player = 1;
+		(*map1).player_loc[0] = find_loc_x(map1, 'P');
+		(*map1).player_loc[1] = find_loc_y(map1, 'P');
+	}
+	if (count_exit(map1) == 1)
+	{
+		map1->coins = 1;
+		(*map1).exit_loc[0] = find_loc_x(map1, 'E');
+		(*map1).exit_loc[1] = find_loc_y(map1, 'E');
+	}
+	(*map1).coins = count_coin(map1);
+}
 
 int check_rectangle(t_map *map)
 {
@@ -69,4 +135,67 @@ void  map(t_map *map)
 	}
 	if (map_len(map) != -1)
 		map->map_width = map_len(map);
+}
+int count_player (t_map *map1)
+{
+	int x;
+	int y;
+	int player;
+
+	player = 0;
+	x = 0;
+	while ((*map1).map_layout[x])
+	{
+		y = 0;
+		while ((*map1).map_layout[x][y])
+		{
+			if ((*map1).map_layout[x][y] == 'P')
+				player++;
+			y++;
+		}
+		x++;
+	}
+	return (player);
+}
+int count_exit (t_map *map1)
+{
+	int x;
+	int y;
+	int exit;
+
+	exit = 0;
+	x = 0;
+	while ((*map1).map_layout[x])
+	{
+		y = 0;
+		while ((*map1).map_layout[x][y])
+		{
+			if ((*map1).map_layout[x][y] == 'E')
+				exit++;
+			y++;
+		}
+		x++;
+	}
+	return (exit);
+}
+int count_coin(t_map *map1)
+{
+	int x;
+	int y;
+	int coin;
+
+	coin = 0;
+	x = 0;
+	while ((*map1).map_layout[x])
+	{
+		y = 0;
+		while ((*map1).map_layout[x][y])
+		{
+			if ((*map1).map_layout[x][y] == 'C')
+				coin++;
+			y++;
+		}
+		x++;
+	}
+	return (coin);
 }

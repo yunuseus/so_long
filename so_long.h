@@ -6,13 +6,26 @@ typedef struct s_map
 	int player_loc[2];
 	int coins;
 	char **map_layout;
+	int player;
+	int exit;
+	int move;
+
 }
 t_map;
 
 #include "get_next_line.h"
 #include <fcntl.h>
 #include "minilibx/mlx.h"
+#include "printf/ft_printf.h"
 #include <stdio.h>
 void  map(t_map *map);
 int ft_strlen(char *str);
 int check_rectangle(t_map *map);
+void move_right(t_map *map1);
+void move_up(t_map *map1);
+void move_left(t_map *map1);
+void move_down(t_map *map1);
+void map_sets(t_map *map1);
+int count_coin(t_map *map1);
+int count_exit (t_map *map1);
+int count_player (t_map *map1);

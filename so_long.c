@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
+/*   Updated: 2025/01/24 16:30:08 by yalp             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
-void swap_loc(t_map map1, int x1, int y1, int x2, int y2)
+int key_check(int keycode, t_map map1)
 {
-	char tmp = map1.map_layout[x1][x2];
-	map1.map_layout[x1][x2] = map1.map_layout[x2][y2];
-	map1.map_layout[x2][y2]= tmp;
+	printf("%d\n", 100);
+	return 1;
 }
+
 void put_wall(void *win, void *mlx, t_map map1)
 {
 	int x;
@@ -76,6 +88,7 @@ int main()
 {
 	t_map map1;
 	map(&map1);
+	map_sets(&map1);
 	int i = 0;
 	int x = 0;
 	int y = 0;
@@ -83,27 +96,26 @@ int main()
 	int a = 0;
 	int b = 0;
 	int w;
-	while(map1.map_layout[i])
-		printf("%s", map1.map_layout[i++]);
 	
-	void *mlx;
-	void *win;
+	// while(map1.map_layout[i])
+	// 	ft_printf("%s", map1.map_layout[i++]);
+	// void *mlx;
+	// void *win;
 
-	mlx = mlx_init();
-	win = mlx_new_window(mlx, (map1.map_width -1)*32, map1.map_height*32, "dnme");
+	// mlx = mlx_init();
+	// win = mlx_new_window(mlx, (map1.map_width -1)*32, map1.map_height*32, "dnme");
 
-	while (1)
-	{
-	put_wall(win,mlx,map1);
-	put_ground(win,mlx,map1);
-	put_coin(win,mlx,map1);
-	swap_loc(map1, 2,3,2,4);
-	sleep(1);
-	swap_loc(map1, 2,4,2,3);
-
-	}
-	mlx_loop(mlx);
+	// mlx_hook(win, 2, 1L << 0, key_check,  &map1);
+	// while (1)
+	// {
+	// 	put_wall(win,mlx,map1);
+	// 	put_ground(win,mlx,map1);
+	// 	put_coin(win,mlx,map1);
+	// 	sleep(1);
+	// 	move_down(map1, 2,3);
+	// }
 	
-	
+	printf("%d", map1.player);
+	// mlx_loop(mlx);
     return (0);
 }
