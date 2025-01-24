@@ -6,16 +6,27 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/24 17:00:55 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/24 18:36:33 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int key_check(int keycode, t_map map1)
+int key_hook(int keycode, t_map *map1)
 {
-	printf("%d\n", 100);
-	return 1;
+	if (keycode == 'a')  // Sol ok tuşu (yani 'left arrow')
+        move_left(map1);   // Kareyi sola hareket ettir
+    if (keycode == 'd')  // Sağ ok tuşu (yani 'right arrow')
+        move_right(map1);     // Kareyi sağa hareket ettir
+    if (keycode == 'w')  // Yukarı ok tuşu (yani 'up arrow')
+        move_up(map1);     // Kareyi yukarı hareket ettir
+    if (keycode == 's')  // Aşağı ok tuşu (yani 'down arrow')
+        move_down(map1);
+		put_player((*map1).win,(*map1).mlx,(*map1));
+		put_wall((*map1).win,(*map1).mlx,(*map1));
+		put_ground((*map1).win,(*map1).mlx,(*map1));
+		put_coin((*map1).win,(*map1).mlx,(*map1));
+	return (0);
 }
 void put_player(void *win, void *mlx, t_map map1)
 {
@@ -120,24 +131,20 @@ int main()
 	
 	while(map1.map_layout[i])
 		ft_printf("%s", map1.map_layout[i++]);
-	void *mlx;
-	void *win;
+	
 
-	mlx = mlx_init();
-	win = mlx_new_window(mlx, (map1.map_width -1)*32, map1.map_height*32, "dnme");
+	map1.mlx = mlx_init();
+	map1.win = mlx_new_window(map1.mlx, (map1.map_width -1)*32, map1.map_height*32, "dnme");
 	ft_printf("%d", map1.coins);
 
-	mlx_hook(win, 2, 1L << 0, key_check,  &map1);
-	while (1)
-	{
-		put_player(win,mlx,map1);
-		put_wall(win,mlx,map1);
-		put_ground(win,mlx,map1);
-		put_coin(win,mlx,map1);
+
+		put_player(map1.win,map1.mlx,map1);
+		put_wall(map1.win,map1.mlx,map1);
+		put_ground(map1.win,map1.mlx,map1);
+		put_coin(map1.win,map1.mlx,map1);
 		sleep(1);
-		move_right(&map1);
-	}
+		mlx_key_hook(map1.win,key_hook,&map1);
 	
-	mlx_loop(mlx);
+	mlx_loop(map1.mlx);
     return (0);
 }

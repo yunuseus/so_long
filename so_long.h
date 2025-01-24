@@ -9,6 +9,8 @@ typedef struct s_map
 	int player;
 	int exit;
 	int move;
+	void *mlx;
+	void *win;
 
 }
 t_map;
@@ -29,3 +31,7 @@ void map_sets(t_map *map1);
 int count_coin(t_map *map1);
 int count_exit (t_map *map1);
 int count_player (t_map *map1);
+void put_wall(void *win, void *mlx, t_map map1);
+void put_ground(void *win, void *mlx, t_map map1);
+void put_coin(void *win, void *mlx, t_map map1);
+void put_player(void *win, void *mlx, t_map map1);
