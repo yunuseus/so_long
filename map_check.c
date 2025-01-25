@@ -134,7 +134,7 @@ void  map(t_map *map)
 		i++;
 	}
 	if (map_len(map) != -1)
-		map->map_width = map_len(map);
+		map->map_width = map_len(map) - 1;
 }
 int count_player (t_map *map1)
 {
