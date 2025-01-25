@@ -134,7 +134,7 @@ int main()
 	
 
 	map1.mlx = mlx_init();
-	map1.win = mlx_new_window(map1.mlx, (map1.map_width -1)*32, map1.map_height*32, "dnme");
+	map1.win = mlx_new_window(map1.mlx, (map1.map_width)*32, map1.map_height*32, "dnme");
 	ft_printf("%d", map1.coins);
 
 
