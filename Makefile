@@ -3,7 +3,7 @@ NAME := so_long
 CC := cc
 
 
-SOURCE := so_long.c get_next_line.c get_next_line_utils.c ft_strlen.c map_check.c moving.c
+SOURCE := so_long.c get_next_line.c get_next_line_utils.c puts.c ft_strlen.c map_check.c moving.c
 LIBRARY := -Lminilibx -lmlx -lX11 -lXext -lm
 MINILIBX := minilibx/
 PRINTF := printf/libftprintf.a

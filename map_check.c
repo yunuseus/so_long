@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:16 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/24 16:30:57 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/27 16:53:52 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ void map_sets(t_map *map1)
 	if (count_player(map1) == 1)
 	{
 		map1->player = 1;
-		(*map1).player_loc[0] = find_loc_x(map1, 'P');
-		(*map1).player_loc[1] = find_loc_y(map1, 'P');
+		(*map1).player_loc[0] = find_loc_y(map1, 'P');
+		(*map1).player_loc[1] = find_loc_x(map1, 'P');
 	}
 	if (count_exit(map1) == 1)
 	{
@@ -64,6 +64,7 @@ void map_sets(t_map *map1)
 		(*map1).exit_loc[1] = find_loc_y(map1, 'E');
 	}
 	(*map1).coins = count_coin(map1);
+	(*map1).move = 0;
 }
 
 int check_rectangle(t_map *map)
