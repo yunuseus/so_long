@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:50:17 by yalp              #+#    #+#             */
-/*   Updated: 2024/12/31 13:51:46 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/27 18:23:36 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int		ft_strlen_gnl(char *str);
+int		ft_strlen(char *str);
 int		ft_strchr_gnl(char *str, char c);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 char	*ft_get_line(char *dst);

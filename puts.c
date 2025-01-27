@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:41:12 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/27 16:45:31 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/27 18:20:45 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void put_player(void *win, void *mlx, t_map map1)
 	int y;
 	int w;
 	y = 0;
-	void *img = mlx_xpm_file_to_image(mlx, "player.xpm",&w, &w);
+	void *img = mlx_xpm_file_to_image(mlx, "photos/player.xpm",&w, &w);
 	while (map1.map_layout[y])
 		{
 			x = 0;
@@ -40,7 +40,7 @@ void put_wall(void *win, void *mlx, t_map map1)
 	int y;
 	int w;
 	y = 0;
-	void *img = mlx_xpm_file_to_image(mlx, "barrier_open.xpm",&w, &w);
+	void *img = mlx_xpm_file_to_image(mlx, "photos/barrier_open.xpm",&w, &w);
 	while (map1.map_layout[y])
 		{
 			x = 0;
@@ -62,7 +62,7 @@ void put_ground(void *win, void *mlx, t_map map1)
 	int y;
 	int w;
 	y = 0;
-	void *ground = mlx_xpm_file_to_image(mlx, "ground.xpm", &w, &w);
+	void *ground = mlx_xpm_file_to_image(mlx, "photos/ground.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;
@@ -84,7 +84,7 @@ void put_coin(void *win, void *mlx, t_map map1)
 	int y;
 	int w;
 	y = 0;
-	void *coin = mlx_xpm_file_to_image(mlx, "coin.xpm", &w, &w);
+	void *coin = mlx_xpm_file_to_image(mlx, "photos/coin.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;
@@ -106,7 +106,7 @@ void put_exit(void *win, void *mlx, t_map map1)
 	int w;
 	y = 0;
 	
-	void 	*exit = mlx_xpm_file_to_image(mlx, "exit.xpm", &w, &w);
+	void 	*exit = mlx_xpm_file_to_image(mlx, "photos/exit.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;
@@ -128,7 +128,7 @@ void put_exit_locked(void *win, void *mlx, t_map map1)
 	int w;
 	y = 0;
 	
-	void 	*exit = mlx_xpm_file_to_image(mlx, "exit_locked.xpm", &w, &w);
+	void 	*exit = mlx_xpm_file_to_image(mlx, "photos/exit_locked.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;

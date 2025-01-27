@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:50:15 by yalp              #+#    #+#             */
-/*   Updated: 2024/11/09 13:47:03 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/27 18:23:48 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_get_left_line(char *buff)
 		return (free(buff), NULL);
 	if (buff[i] == '\n')
 		i++;
-	ret = malloc(sizeof(char) * (ft_strlen_gnl(buff) - i + 1));
+	ret = malloc(sizeof(char) * (ft_strlen(buff) - i + 1));
 	if (!ret)
 		return (free(buff), NULL);
 	j = 0;

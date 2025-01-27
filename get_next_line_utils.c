@@ -6,13 +6,13 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:50:10 by yalp              #+#    #+#             */
-/*   Updated: 2024/11/09 13:49:10 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/27 18:24:07 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen_gnl(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 
 	a = 0;
 	b = 0;
-	ret = malloc(sizeof(char) * (ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1));
+	ret = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!ret)
 		return (NULL);
 	while (s1[a])

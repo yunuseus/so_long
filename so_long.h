@@ -21,7 +21,7 @@ t_map;
 #include "printf/ft_printf.h"
 #include <stdio.h>
 void  map(t_map *map);
-int ft_strlen(char *str);
+int check(t_map map1);
 int check_rectangle(t_map *map);
 void move_right(t_map *map1);
 void move_up(t_map *map1);
