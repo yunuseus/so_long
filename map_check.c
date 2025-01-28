@@ -6,12 +6,29 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:16 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 15:12:29 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/28 15:38:36 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+int	map_len(t_map *map)
+{
+	int	len;
+	int	b;
+
+	b = 1;
+	len = ft_strlen(map->map_layout[0]);
+	while (b < map->map_height -1)
+	{
+		if (ft_strlen(map->map_layout[b]) != len)
+			return (-1);
+		b ++;
+	}
+	if (ft_strlen(map->map_layout[map->map_height -1]) + 1 != len)
+		return (-1);
+	return (len);
+}
 void	map_sets(t_map *map1)
 {
 	if (count_player(map1) == 1)
@@ -20,8 +37,8 @@ void	map_sets(t_map *map1)
 		map1->player_loc[0] = find_loc_y(map1, 'P');
 		map1->player_loc[1] = find_loc_x(map1, 'P');
 	}
-	if (map_len(map) != -1)
-		map1->map_width = map_len(map) - 1;
+	if (map_len(map1) != -1)
+		map1->map_width = map_len(map1) - 1;
 	map1->coins = count_coin(map1);
 	map1->move = 0;
 }
@@ -52,23 +69,6 @@ int	check_rectangle(t_map *map)
 	return (0);
 }
 
-int	map_len(t_map *map)
-{
-	int	len;
-	int	b;
-
-	b = 1;
-	len = ft_strlen(map->map_layout[0]);
-	while (b < map->map_height -1)
-	{
-		if (ft_strlen(map->map_layout[b]) != len)
-			return (-1);
-		b ++;
-	}
-	if (ft_strlen(map->map_layout[map->map_height -1]) + 1 != len)
-		return (-1);
-	return (len);
-}
 
 void	map(t_map *map)
 {

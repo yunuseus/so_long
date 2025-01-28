@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:36:14 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 15:29:13 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/28 15:35:00 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,8 @@ void	put_exit(void *win, void *mlx, t_map map1);
 void	put_exit_locked(void *win, void *mlx, t_map map1);
 int		find_loc_y(t_map *map1, char a);
 void	freeall(t_map *map1);
+int		map_len(t_map *map);
+int		find_loc_y(t_map *map1, char a);
+int		find_loc_x(t_map *map1, char a);
 
 #endif
