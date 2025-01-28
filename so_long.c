@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 16:08:06 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/28 16:51:35 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int	main(int argc, char **argv)
 	i = 0;
 	map(&map1);
 	map_sets(&map1);
+	error_put(map1);
 	while (map1.map_layout[i])
 		ft_printf("%s", map1.map_layout[i++]);
 	map1.mlx = mlx_init();

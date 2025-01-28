@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:16 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 16:01:36 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/28 16:44:15 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,18 +53,18 @@ int	check_rectangle(t_map *map)
 	while (map->map_layout[i] && i < map->map_height)
 	{
 		j = 0;
-		while (map->map_layout[i][j] && j < map->map_width -1)
+		while (map->map_layout[i][j] && j < map->map_width -3)
 		{
 			if (map->map_layout[0][j] != '1')
 				return (-1);
 			if (map->map_layout[map->map_height -1][j] != '1')
-				return (-1);
+				return (-2);
 			j++;
 		}
 		if (map->map_layout[i][0] != '1')
-			return (-1);
-		if (map->map_layout[i][map->map_width -2] != '1')
-			return (-1);
+			return (-3);
+		if (map->map_layout[i][map->map_width -1] != '1')
+			return (-4);
 		i++;
 	}
 	return (0);
