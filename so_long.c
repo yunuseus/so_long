@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 15:06:07 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/28 16:08:06 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	key_hook(int keycode, t_map *map1)
 	put_wall(map1->win, map1->mlx, *map1);
 	put_ground(map1->win, map1->mlx, *map1);
 	put_coin(map1->win, map1->mlx, *map1);
-	ft_printf("\n x:%d  y:%d   coins:%d  move:%d", map1->player_loc[1], map1->player_loc[0], map1->coins, map1->move);
+	ft_printf("\ncoins:%d  move:%d", map1->coins, map1->move);
 	if (map1->coins != 0)
 		put_exit_locked(map1->win, map1->mlx, *map1);
 	else
@@ -52,7 +52,6 @@ int	main(int argc, char **argv)
 	map1.mlx = mlx_init();
 	map1.win = mlx_new_window(map1.mlx, (map1.map_width) * 32, \
 	map1.map_height * 32, "game");
-	ft_printf("%d", map1.player_loc[1]);
 	put_player(map1.win, map1.mlx, map1);
 	put_exit_locked(map1.win, map1.mlx, map1);
 	put_wall(map1.win, map1.mlx, map1);
