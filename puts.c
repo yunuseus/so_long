@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:41:12 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 15:10:02 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/28 15:57:42 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	put_player(void *win, void *mlx, t_map map1)
 		}
 		y++;
 	}
-	free(player);
 }
 
 void	put_wall(void *win, void *mlx, t_map map1)
@@ -59,7 +58,6 @@ void	put_wall(void *win, void *mlx, t_map map1)
 		y++;
 	}
 	mlx_destroy_image(mlx, wall);
-	free(wall);
 }
 
 void	put_ground(void *win, void *mlx, t_map map1)
@@ -83,7 +81,6 @@ void	put_ground(void *win, void *mlx, t_map map1)
 		y++;
 	}
 	mlx_destroy_image(mlx, ground);
-	free(ground);
 }
 
 void	put_coin(void *win, void *mlx, t_map map1)
@@ -107,7 +104,6 @@ void	put_coin(void *win, void *mlx, t_map map1)
 		y++;
 	}
 	mlx_destroy_image(mlx, coin);
-	free(coin);
 }
 
 void	put_exit(void *win, void *mlx, t_map map1)
