@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 16:18:31 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/31 18:23:03 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/31 19:31:44 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ int	mapsize(t_map *map1)
 
 void	mapcpy(t_map *map1, t_map *map2)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (i < map1->map_height)
 	{
