@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:36:14 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 16:20:16 by yalp             ###   ########.fr       */
+/*   Updated: 2025/01/31 18:22:25 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct t_map
 	void	*win;
 }	t_map;
 
-void	map(t_map *map);
+void	map(t_map *map, char *path);
 int		check(t_map map1);
 int		check_rectangle(t_map *map);
 void	move_right(t_map *map1);
@@ -59,5 +59,9 @@ int		map_len(t_map *map);
 int		find_loc_y(t_map *map1, char a);
 int		find_loc_x(t_map *map1, char a);
 void	error_put(t_map map1);
+void	real_fill(t_map *map1, int x, int y);
+void	mapcpy(t_map *map1, t_map *map2);
+int		mapsize(t_map *map1);
+int		check_exit_around(t_map map2);
 
 #endif
