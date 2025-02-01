@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:27:32 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/31 19:30:12 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/01 14:54:01 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,22 @@ int	flood_fill(t_map *map1)
 	int		i;
 	int		x;
 	int		y;
+	int		coins;
 
 	x = find_loc_y(map1, 'P');
 	y = find_loc_x(map1, 'P');
-	map2.map_layout = malloc(mapsize(map1) + 1);
+	map2.map_layout = malloc(sizeof(char *) * (map1->map_height + 1));
 	if (!map2.map_layout)
 		return (0);
 	mapcpy(map1, &map2);
 	real_fill(&map2, y, x);
-	if (count_coin(&map2) == 0 && check_exit_around(map2))
+	coins = count_coin(&map2);
+	if (coins == 0 && check_exit_around(map2))
+	{
+		free_ffill(&map2, map1);
 		return (1);
+	}
+	free_ffill(&map2, map1);
 	return (0);
 }
 

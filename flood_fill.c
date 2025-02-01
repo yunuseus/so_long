@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 16:18:31 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/31 19:31:44 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/01 15:01:27 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,27 +45,6 @@ int	check_exit_around(t_map map2)
 	return (0);
 }
 
-int	mapsize(t_map *map1)
-{
-	int	i;
-	int	j;
-	int	size;
-
-	i = 0;
-	size = 0;
-	while (map1->map_layout[i])
-	{
-		j = 0;
-		while (map1->map_layout[i][j])
-		{
-			size++;
-			j++;
-		}
-		i++;
-	}
-	return (size);
-}
-
 void	mapcpy(t_map *map1, t_map *map2)
 {
 	int	i;
@@ -76,6 +55,7 @@ void	mapcpy(t_map *map1, t_map *map2)
 		map2->map_layout[i] = ft_strdup(map1->map_layout[i]);
 		i++;
 	}
+	map2->map_layout[i] = NULL;
 }
 
 void	real_fill(t_map *map2, int x, int y)
