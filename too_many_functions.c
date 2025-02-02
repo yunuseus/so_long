@@ -6,11 +6,12 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 15:07:15 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/31 18:41:47 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:06:50 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include "minilibx-linux/mlx.h"
 
 void	put_exit_locked(void *win, void *mlx, t_map map1)
 {
@@ -20,7 +21,7 @@ void	put_exit_locked(void *win, void *mlx, t_map map1)
 	void	*exit;
 
 	y = 0;
-	exit = mlx_xpm_file_to_image(mlx, "photos/exit_locked.xpm", &w, &w);
+	exit = mlx_xpm_file_to_image(mlx, "textures/exit_locked.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;

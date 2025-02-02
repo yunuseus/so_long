@@ -6,11 +6,14 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:27:32 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/01 14:54:01 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:30:40 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include "printf/ft_printf.h"
+#include <stdlib.h>
+#include "get_next_line.h"
 
 int	check_chars(t_map map1)
 {
@@ -37,7 +40,6 @@ int	check_chars(t_map map1)
 int	flood_fill(t_map *map1)
 {
 	t_map	map2;
-	int		i;
 	int		x;
 	int		y;
 	int		coins;
@@ -48,7 +50,7 @@ int	flood_fill(t_map *map1)
 	if (!map2.map_layout)
 		return (0);
 	mapcpy(map1, &map2);
-	real_fill(&map2, y, x);
+	real_fill(&map2, x, y);
 	coins = count_coin(&map2);
 	if (coins == 0 && check_exit_around(map2))
 	{

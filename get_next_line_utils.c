@@ -6,11 +6,13 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:50:10 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/27 18:24:07 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:01:08 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 int	ft_strlen(char *str)
 {

@@ -6,11 +6,13 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:50:15 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/27 18:23:48 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:00:47 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <unistd.h>
+#include <stdlib.h>
 
 char	*ft_get_line(char *dst)
 {

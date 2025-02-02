@@ -6,11 +6,13 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:13:05 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/01 15:01:16 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:07:13 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include "minilibx-linux/mlx.h"
+#include <stdlib.h>
 
 void	free_ffill(t_map *map2, t_map *map1)
 {

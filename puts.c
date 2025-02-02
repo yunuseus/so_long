@@ -6,11 +6,12 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:41:12 by yalp              #+#    #+#             */
-/*   Updated: 2025/01/28 15:57:42 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:06:29 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include "minilibx-linux/mlx.h"
 
 void	put_player(void *win, void *mlx, t_map map1)
 {
@@ -20,7 +21,7 @@ void	put_player(void *win, void *mlx, t_map map1)
 	void	*player;
 
 	y = 0;
-	player = mlx_xpm_file_to_image(mlx, "photos/player.xpm", &w, &w);
+	player = mlx_xpm_file_to_image(mlx, "textures/player.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;
@@ -45,7 +46,7 @@ void	put_wall(void *win, void *mlx, t_map map1)
 	void	*wall;
 
 	y = 0;
-	wall = mlx_xpm_file_to_image(mlx, "photos/barrier_open.xpm", &w, &w);
+	wall = mlx_xpm_file_to_image(mlx, "textures/barrier_open.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;
@@ -68,7 +69,7 @@ void	put_ground(void *win, void *mlx, t_map map1)
 	void	*ground;
 
 	y = 0;
-	ground = mlx_xpm_file_to_image(mlx, "photos/ground.xpm", &w, &w);
+	ground = mlx_xpm_file_to_image(mlx, "textures/ground.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;
@@ -91,7 +92,7 @@ void	put_coin(void *win, void *mlx, t_map map1)
 	void	*coin;
 
 	y = 0;
-	coin = mlx_xpm_file_to_image(mlx, "photos/coin.xpm", &w, &w);
+	coin = mlx_xpm_file_to_image(mlx, "textures/coin.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;
@@ -114,7 +115,7 @@ void	put_exit(void *win, void *mlx, t_map map1)
 	void	*exit;
 
 	y = 0;
-	exit = mlx_xpm_file_to_image(mlx, "photos/exit.xpm", &w, &w);
+	exit = mlx_xpm_file_to_image(mlx, "textures/exit.xpm", &w, &w);
 	while (map1.map_layout[y])
 	{
 		x = 0;

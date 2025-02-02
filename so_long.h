@@ -6,17 +6,12 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:36:14 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/01 14:43:14 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:33:14 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-# include "get_next_line.h"
-# include <fcntl.h>
-# include "minilibx-linux/mlx.h"
-# include "printf/ft_printf.h"
-# include <stdio.h>
 
 typedef struct t_map
 {

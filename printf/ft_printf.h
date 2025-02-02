@@ -6,16 +6,13 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:49:58 by yalp              #+#    #+#             */
-/*   Updated: 2024/10/30 14:52:05 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 13:59:00 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 
 # define FT_PRINTF_H
-
-# include <stdarg.h>
-# include <unistd.h>
 
 int	ft_prntchar(int c);
 int	ft_prntstr(char *str);

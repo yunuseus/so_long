@@ -6,11 +6,13 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:50:04 by yalp              #+#    #+#             */
-/*   Updated: 2024/10/30 16:42:53 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 14:03:29 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdarg.h>
+#include <unistd.h>
 
 int	ft_prntchar(int c)
 {
