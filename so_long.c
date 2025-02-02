@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/02 13:53:35 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/02 15:51:34 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ int	key_hook(int keycode, t_map *map1)
 		put_exit(map1->win, map1->mlx, *map1);
 	if (find_loc_y(map1, 'E') == -1 || keycode == 65307)
 	{
-		ft_printf("\n%s", "YOU WON THE GAME!");
+		if (keycode != 65307)
+			ft_printf("\n%s", "YOU WON THE GAME!");
 		freeall(map1);
 		exit(1);
 	}
