@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/02 15:51:34 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/04 14:31:37 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ int	main(int argc, char **argv)
 
 	i = 0;
 	arg_check(argc, argv);
+	map_file_check(argv[1]);
 	map(&map1, argv[1]);
 	map_sets(&map1);
 	error_put(map1);
