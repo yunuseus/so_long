@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:36:14 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/04 14:34:02 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/05 18:30:06 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,5 @@ void	mapcpy(t_map *map1, t_map *map2);
 int		mapsize(t_map *map1);
 int		check_exit_around(t_map map2);
 void	map_file_check(char *mapfile);
+void	free_map(t_map *map1);
 #endif

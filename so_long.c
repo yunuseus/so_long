@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/05 15:40:56 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/05 18:25:48 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,7 @@ void	arg_check(int argc, char **argv)
 int	main(int argc, char **argv)
 {
 	t_map	map1;
-	int		i;
 
-	i = 0;
 	arg_check(argc, argv);
 	map_file_check(argv[1]);
 	map(&map1, argv[1]);
