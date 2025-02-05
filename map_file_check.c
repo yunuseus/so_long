@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 14:16:24 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/04 14:34:27 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/05 14:00:22 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ void	map_file_check(char *mapfile)
 		ft_printf("ERROR\nEMPTY MAP FİLE");
 		exit(1);
 	}
+	else
+	 free(check_null);
 }
