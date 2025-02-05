@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:16:03 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/04 14:31:37 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/05 15:40:56 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	arg_check(int argc, char **argv)
 	i = 0;
 	if (argc != 2)
 	{
-		ft_printf("%s", "BAD ARGUMENTS");
+		ft_printf("%s", "ERROR\nBAD ARGUMENTS");
 		exit(1);
 	}
 	while (argv[1][i])
@@ -73,13 +73,13 @@ void	arg_check(int argc, char **argv)
 	if (!(argv[1][i - 1] == 'r' && argv[1][i - 2] == 'e' &&
 		argv[1][i - 3] == 'b' && argv[1][i - 4] == '.') || i < 5)
 	{
-		ft_printf("%s", "MAP FILE IS NOT A .ber FILE");
+		ft_printf("%s", "ERROR\nMAP FILE IS NOT A .ber FILE");
 		exit(1);
 	}
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		ft_printf("%s", "MAP FILE CAN NOT OPEN");
+		ft_printf("%s", "ERROR\nMAP FILE CAN NOT OPEN");
 		exit(1);
 	}
 }
