@@ -1,7 +1,7 @@
 NAME = so_long
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRC = so_long.c get_next_line.c get_next_line_utils.c puts.c \
        map_check.c moving.c end.c too_many_functions.c checks.c flood_fill.c map_file_check.c

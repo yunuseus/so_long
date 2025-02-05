@@ -6,7 +6,7 @@
 /*   By: yalp <yalp@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:27:32 by yalp              #+#    #+#             */
-/*   Updated: 2025/02/05 18:29:48 by yalp             ###   ########.fr       */
+/*   Updated: 2025/02/05 19:03:19 by yalp             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,5 @@ void	error_put(t_map map1)
 	if (i == -6)
 		ft_printf("%s\n%s", "ERROR", "IMPOSSIBLE TO COMPLATE THE MAP");
 	free_map(&map1);
-	exit(check(map1));
+	exit(-1);
 }
